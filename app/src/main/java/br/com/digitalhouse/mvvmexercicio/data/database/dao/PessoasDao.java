@@ -19,14 +19,11 @@ public interface PessoasDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Pessoa pessoa);
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAll(List<Pessoa> pessoas);
-
     @Update
     void update(Pessoa pessoa);
 
     @Delete
-    void update(Pessoa pessoa);
+    void delete(Pessoa pessoa);
 
     @Query("select * from pessoas limit 30")
     List<Pessoa> getAll();

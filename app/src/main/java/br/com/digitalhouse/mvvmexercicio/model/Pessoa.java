@@ -15,7 +15,7 @@ public class Pessoa {
 
     @Expose
     // se quiser renomear o nome da tabela
-    @ColumnInfo(name = 'cell')
+    @ColumnInfo(name = "cell")
     private String cell;
 
     // se não, ela fica com o nome que está vindo
@@ -41,6 +41,17 @@ public class Pessoa {
     private Picture picture;
     @Expose
     private Registered registered;
+
+    public long getIdBanco() {
+        return idBanco;
+    }
+
+    public void setIdBanco(long idBanco) {
+        this.idBanco = idBanco;
+    }
+
+    public Pessoa() {
+    }
 
     public String getCell() {
         return cell;
